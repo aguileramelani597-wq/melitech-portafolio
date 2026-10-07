@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MeliTech | Portafolio Web</title>
+
+    <meta name="description"
+        content="MeliTech - Portafolio de Melani Aguilera. Desarrollo de páginas web, catálogos digitales y sistemas de ventas y stock.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5fffc;
+            color: #183b36;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f766e, #14b8a6);
+            color: white;
+            text-align: center;
+            padding: 55px 20px 45px;
+        }
+
+        .logo {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: white;
+            color: #0f766e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        .contenedor {
+            width: 90%;
+            max-width: 950px;
+            margin: 40px auto;
+        }
+
+        .presentacion {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .presentacion h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .presentacion p {
+            color: #55736e;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .proyectos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
+        }
+
+        .proyecto {
+            background: white;
+            border-radius: 18px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(15, 118, 110, 0.10);
+            border: 1px solid #d8f3ee;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .proyecto:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(15, 118, 110, 0.18);
+        }
+
+        .icono {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .proyecto h3 {
+            margin-bottom: 10px;
+            font-size: 21px;
+        }
+
+        .proyecto p {
+            color: #617873;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .boton {
+            display: inline-block;
+            text-decoration: none;
+            background: #0f766e;
+            color: white;
+            padding: 11px 18px;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .boton:hover {
+            background: #115e59;
+        }
+
+        .contacto {
+            text-align: center;
+            margin-top: 45px;
+            padding: 30px;
+            background: white;
+            border-radius: 18px;
+            border: 1px solid #d8f3ee;
+        }
+
+        .contacto h2 {
+            margin-bottom: 10px;
+        }
+
+        .contacto p {
+            color: #617873;
+            margin-bottom: 20px;
+        }
+
+        .whatsapp {
+            display: inline-block;
+            background: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 13px 22px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #6b8580;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 40px 20px;
+            }
+
+            header h1 {
+                font-size: 34px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            .contenedor {
+                width: 92%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            MT
+        </div>
+
+        <h1>MeliTech</h1>
+
+        <p>Diseño y desarrollo de páginas web</p>
+
+    </header>
+
+
+    <main class="contenedor">
+
+        <section class="presentacion">
+
+            <h2>Mis proyectos</h2>
+
+            <p>
+                Hola, soy Melani Aguilera.
+                Este es mi portafolio donde podés conocer algunos
+                de los proyectos web que desarrollé.
+            </p>
+
+        </section>
+
+
+        <section class="proyectos">
+
+
+            <!-- AMORE REGALOS -->
+
+            <article class="proyecto">
+
+                <div class="icono">🎁</div>
+
+                <h3>Amore Regalos</h3>
+
+                <p>
+                    Tienda online de regalos, tazas, peluches,
+                    accesorios y detalles para personas especiales.
+                </p>
+
+                <a href="#" class="boton">
+                    Ver página
+                </a>
+
+            </article>
+
+
+            <!-- LU_LASH&NAILS -->
+
+            <article class="proyecto">
+
+                <div class="icono">💅</div>
+
+                <h3>Lu_Lash&Nails</h3>
+
+                <p>
+                    Página web para un estudio de uñas,
+                    con servicios, galería y medios de contacto.
+                </p>
+
+                <a href="#" class="boton">
+                    Ver página
+                </a>
+
+            </article>
+
+
+            <!-- TIENDA DE ROPA -->
+
+            <article class="proyecto">
+
+                <div class="icono">👗</div>
+
+                <h3>Tienda de ropa</h3>
+
+                <p>
+                    Proyecto de tienda online con productos,
+                    categorías e imágenes.
+                </p>
+
+                <a href="#" class="boton">
+                    Ver página
+                </a>
+
+            </article>
+
+
+        </section>
+
+
+        <section class="contacto">
+
+            <h2>¿Querés una página web para tu negocio?</h2>
+
+            <p>
+                Puedo ayudarte a crear una página web,
+                catálogo digital o sistema para tu negocio.
+            </p>
+
+            <a
+                class="whatsapp"
+                href="https://wa.me/5492646061764"
+                target="_blank">
+
+                💬 Contactarme por WhatsApp
+
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        © 2026 MeliTech · Melani Aguilera
+
+    </footer>
+
+</body>
+
+</html>
