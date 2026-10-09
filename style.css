@@ -77,7 +77,6 @@ button {
     justify-content: space-between;
     gap: 25px;
 }
-
 .brand {
     display: inline-flex;
     align-items: center;
@@ -85,12 +84,15 @@ button {
     font-size: 1.55rem;
     font-weight: 800;
     letter-spacing: -1px;
+    flex-shrink: 0;
 }
 
 .logo {
-    width: 43px;
-    height: 43px;
+    width: 48px;
+    height: 48px;
     object-fit: contain;
+    display: block;
+    flex-shrink: 0;
 }
 
 .nav-links {
