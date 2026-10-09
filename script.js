@@ -10,42 +10,57 @@ document.addEventListener("DOMContentLoaded", () => {
         year.textContent = new Date().getFullYear();
     }
 
-    // Abrir y cerrar el menú en celulares.
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener("click", () => {
-            const isOpen = navLinks.classList.toggle("active");
+    if (!menuToggle || !navLinks) return;
 
-            menuToggle.setAttribute("aria-expanded", String(isOpen));
-            menuToggle.setAttribute(
-                "aria-label",
-                isOpen ? "Cerrar menú" : "Abrir menú"
-            );
+    // Abrir y cerrar el menú.
+    const cerrarMenu = () => {
+        navLinks.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Abrir menú");
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    };
 
-            menuToggle.innerHTML = isOpen
-                ? '<i class="fa-solid fa-xmark"></i>'
-                : '<i class="fa-solid fa-bars"></i>';
-        });
+    menuToggle.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("active");
 
-        // Cerrar el menú al seleccionar una sección.
-        navLinks.querySelectorAll("a").forEach((link) => {
-            link.addEventListener("click", () => {
-                navLinks.classList.remove("active");
-                menuToggle.setAttribute("aria-expanded", "false");
-                menuToggle.setAttribute("aria-label", "Abrir menú");
-                menuToggle.innerHTML =
-                    '<i class="fa-solid fa-bars"></i>';
-            });
-        });
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Cerrar menú" : "Abrir menú"
+        );
 
-        // Cerrar el menú con Escape.
-        document.addEventListener("keydown", (event) => {
-            if (event.key === "Escape") {
-                navLinks.classList.remove("active");
-                menuToggle.setAttribute("aria-expanded", "false");
-                menuToggle.setAttribute("aria-label", "Abrir menú");
-                menuToggle.innerHTML =
-                    '<i class="fa-solid fa-bars"></i>';
-            }
-        });
-    }
+        menuToggle.innerHTML = isOpen
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
+    });
+
+    // Cerrar al seleccionar una sección.
+    navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", cerrarMenu);
+    });
+
+    // Cerrar con Escape.
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            cerrarMenu();
+        }
+    });
+
+    // Cerrar al tocar fuera del menú.
+    document.addEventListener("click", (event) => {
+        if (
+            navLinks.classList.contains("active") &&
+            !navLinks.contains(event.target) &&
+            !menuToggle.contains(event.target)
+        ) {
+            cerrarMenu();
+        }
+    });
+
+    // Cerrar si se cambia de celular a computadora.
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 650) {
+            cerrarMenu();
+        }
+    });
 });
