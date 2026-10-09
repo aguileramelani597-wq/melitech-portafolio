@@ -891,3 +891,317 @@ button {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* ========================================
+   MELITECH - ADAPTACIÓN A TODOS LOS CELULARES
+   ======================================== */
+
+/* Evita desbordamientos y anchos excesivos */
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+.container {
+    width: min(1120px, calc(100% - 40px));
+}
+
+/* Evita que palabras largas rompan el diseño */
+h1,
+h2,
+h3,
+p,
+a,
+span {
+    overflow-wrap: anywhere;
+}
+
+/* Tablets y pantallas medianas */
+@media (max-width: 900px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hero-content {
+        min-width: 0;
+    }
+
+    .hero-visual {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .code-window {
+        width: min(100%, 440px);
+    }
+
+    .floating-top {
+        right: 0;
+    }
+
+    .floating-bottom {
+        left: 0;
+    }
+
+    .about-card {
+        grid-template-columns: 90px minmax(0, 1fr);
+        gap: 24px;
+        padding: 28px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 650px) {
+    .container {
+        width: calc(100% - 32px);
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .navbar {
+        min-height: 70px;
+        gap: 12px;
+    }
+
+    .brand {
+        gap: 8px;
+        font-size: 1.3rem;
+        min-width: 0;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu-toggle {
+        padding: 8px;
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    .nav-links {
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 12px 16px 20px;
+    }
+
+    .hero {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .eyebrow {
+        max-width: 100%;
+        font-size: 0.65rem;
+        letter-spacing: 0.5px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 8.5vw, 3rem);
+        line-height: 1.15;
+        letter-spacing: -1px;
+        margin: 22px 0;
+    }
+
+    .hero-content > p {
+        font-size: 0.95rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        min-height: 48px;
+        text-align: center;
+    }
+
+    .hero-note {
+        font-size: 0.76rem;
+    }
+
+    .hero-visual {
+        min-height: 300px;
+        overflow: visible;
+    }
+
+    .code-window {
+        transform: none;
+        max-width: 100%;
+    }
+
+    .code-content {
+        padding: 18px 14px;
+        font-size: clamp(0.59rem, 2.6vw, 0.78rem);
+    }
+
+    .orbit-one {
+        width: min(85vw, 310px);
+        height: min(85vw, 310px);
+    }
+
+    .orbit-two {
+        width: min(68vw, 250px);
+        height: min(68vw, 250px);
+    }
+
+    .floating-card {
+        max-width: 145px;
+        font-size: 0.68rem;
+        padding: 9px;
+    }
+
+    .floating-top {
+        top: 0;
+        right: 0;
+    }
+
+    .floating-bottom {
+        bottom: 0;
+        left: 0;
+    }
+
+    .section-heading {
+        margin-bottom: 32px;
+    }
+
+    .section-heading h2,
+    .contact-box h2 {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+        letter-spacing: -0.7px;
+    }
+
+    .about-card {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        padding: 22px;
+        gap: 20px;
+    }
+
+    .about-icon {
+        width: 68px;
+        height: 68px;
+        font-size: 1.8rem;
+        border-radius: 18px;
+    }
+
+    .about-text h3 {
+        font-size: 1.25rem;
+    }
+
+    .skills {
+        gap: 7px;
+    }
+
+    .skills span {
+        font-size: 0.7rem;
+    }
+
+    .services-grid,
+    .projects-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .service-card,
+    .project-info {
+        padding: 22px;
+    }
+
+    .project-image {
+        min-height: 190px;
+    }
+
+    .project-info > p {
+        min-height: 0;
+    }
+
+    .contact-box {
+        padding: 38px 20px;
+        border-radius: 17px;
+    }
+
+    .contact-box > p:not(.contact-note) {
+        font-size: 0.92rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-content p {
+        width: 100%;
+        order: initial;
+    }
+}
+
+/* Celulares muy pequeños */
+@media (max-width: 360px) {
+    .container {
+        width: calc(100% - 24px);
+    }
+
+    .brand {
+        font-size: 1.12rem;
+        gap: 6px;
+    }
+
+    .logo {
+        width: 34px;
+        height: 34px;
+    }
+
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+
+    .code-content {
+        font-size: 0.56rem;
+        padding: 15px 10px;
+    }
+
+    .floating-card {
+        max-width: 125px;
+        font-size: 0.62rem;
+    }
+
+    .about-card,
+    .service-card,
+    .project-info {
+        padding: 18px;
+    }
+}
+
+/* Mejora la interacción en pantallas táctiles */
+@media (hover: none) {
+    .service-card:hover,
+    .project-card:hover,
+    .btn:hover {
+        transform: none;
+    }
+
+    .nav-links a,
+    .btn,
+    .project-link,
+    .menu-toggle {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+
